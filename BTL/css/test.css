@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    width: 1000px;
+    height: 500px;
+    border: 2px solid blue;
+}
+
+.content {
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    margin: 0px auto;
+    position: relative;
+}
+
+.img_add{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
