@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/index.css">
     <link rel="icon" href="../img/logoPTIT.png">
-    <title>Hệ Thống IoT</title>
+    <link rel="stylesheet" type="text/css" href="../css/control.css">
+    <title>Điều Khiển Hệ Thống</title>
 </head>
-
 <body>
     <div class="bg_banner"></div>
 
@@ -55,26 +54,26 @@
     </div>
 
     <div class="bg_mid">
-        <div class="sr_temp" style="margin-left: 120px;"> <!--style="margin-left: 120px;" -->
-            <img src="../icon/icon_temp.png">
-            <p>Temp: 67*C</p>
+        <div class="sr_led">
+            <img id="icon_led" src="../icon/icon_ledoff.png">
         </div>
-
-        <div class="sr_humi">
-            <img src="../icon/icon_humi.png">
-            <p>Humi: 60%</p>
+        <div class="sr_sw">
+            <img  id="icon_sw" style="cursor: pointer;" onclick="changeStatus()" src="../icon/icon_sw_off.png">
         </div>
-
-        <div class="sr_gas">
-            <img src="../icon/icon_gas.png">
-            <p>Gas: 20%</p>
-        </div>
-        
-        <div class="sr_add">
-            <img src="../icon/icon_add.png">
-        </div>
-
     </div>
+    
+    <script type="text/javascript"> 
+        function changeStatus(){
+            if(document.getElementById('icon_sw').src == 'http://127.0.0.1:8080/1.html_basic/MCB/BTL/icon/icon_sw_off.png'){
+                document.getElementById('icon_sw').src = 'http://127.0.0.1:8080/1.html_basic/MCB/BTL/icon/icon_sw_on.png';
+                document.getElementById('icon_led').src = 'http://127.0.0.1:8080/1.html_basic/MCB/BTL/icon/icon_ledon.png';
+            }
+            
+            else if(document.getElementById('icon_sw').src == 'http://127.0.0.1:8080/1.html_basic/MCB/BTL/icon/icon_sw_on.png'){
+                document.getElementById('icon_sw').src = 'http://127.0.0.1:8080/1.html_basic/MCB/BTL/icon/icon_sw_off.png';
+                document.getElementById('icon_led').src = 'http://127.0.0.1:8080/1.html_basic/MCB/BTL/icon/icon_ledoff.png';
+            }
+        }
+    </script>
 </body>
-
 </html>
