@@ -63,12 +63,44 @@ body{
     font-size: 20px;
 }
 
+.bg_menu > ul  > li:hover .bg_menu_ht{
+    display: block;
+}
+
+.bg_menu_ht{
+    width: 200px;
+    min-height: 100px;
+    background-color: #ccc;
+    display: none;
+    position: absolute;
+    z-index: 3;
+    opacity: 0.7;
+}
+
+.bg_menu_ht > li{
+    list-style: none;
+}
+
+.bg_menu_ht > li > a{
+    text-decoration: none;
+    color: blue;
+    display: block;
+    text-indent: 15px;
+    line-height: 40px;
+}
+
+.bg_menu_ht > li  a:hover{
+    background: red;
+    border-left: 5px solid blue;
+}
+
 .bg_mid{
     width: 900px;
     min-height: 100vh;
     background-size: 100%; 
     background-image: linear-gradient(0,  rgba(171, 178, 185, 0.7) ,rgba(93, 109, 126, 0.7));
     position: relative;
+    float:left;
 }
 
 
